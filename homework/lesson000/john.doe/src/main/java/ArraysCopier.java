@@ -21,14 +21,14 @@ public class ArraysCopier {
   }
 
   public int[] copyOfRange(int from, int to) {
-    int newLength = to - from + 1;
+    int newLength = to - from;
 
-    if (newLength < 1) {
+    if (newLength < 0) {
       return null;
     }
 
     int[] newArray = new int[newLength];
-    for (int i = from, newIndex = 0; i <= to; i++, newIndex++) {
+    for (int i = from, newIndex = 0; i < to; i++, newIndex++) {
       newArray[newIndex] = array[i];
     }
     return newArray;

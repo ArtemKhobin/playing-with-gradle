@@ -41,17 +41,17 @@ public class ArraysCopierAcceptanceTest {
 
   @Test
   public void coppyFirstHalfOfArray() throws Exception {
-    assertThat_CopyOfRange(0, 2, new int[] {1, 2, 3});
+    assertThat_CopyOfRange(0, 2, new int[] {1, 2});
   }
 
   @Test
   public void coppySecondHalfOfArray() throws Exception {
-    assertThat_CopyOfRange(2, 4, new int[] {3, 4, 5});
+    assertThat_CopyOfRange(2, 4, new int[] {3, 4});
   }
 
   @Test
-  public void coppyOneElementOfArray() throws Exception {
-    assertThat_CopyOfRange(4, 4, new int[] {5});
+  public void coppyOneElementOfArray_shouldReturnEmptyArray() throws Exception {
+    assertThat_CopyOfRange(4, 4, new int[] {});
   }
 
   @Test

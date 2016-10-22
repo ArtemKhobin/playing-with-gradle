@@ -2,7 +2,7 @@ rootProject.name = 'JElementary Homework, Finches team'
 
 def rootDir = new File('./homework')
 rootDir.eachDirMatch ~/lesson\d+\.*\d*/, {
-  def gradleIgnoreLessonFile = new File(it.path + '/' + '.gradleIgnore')
+  def gradleIgnoreLessonFile = new File(it.path + File.separator + '.gradleIgnore')
   if (!gradleIgnoreLessonFile.exists()) {
     it.eachDirMatch ~/^(?!acceptanceTests).*$/, {
       include(it.path.substring(2))
