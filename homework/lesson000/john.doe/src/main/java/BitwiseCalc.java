@@ -1,10 +1,20 @@
 public class BitwiseCalc {
   public static String and(String binaryLeft, String binaryRight) {
+    if (binaryLeft.length() > binaryRight.length()) {
+      binaryRight = addPaddingsTo(binaryRight, binaryLeft.length());
+    } else {
+      binaryLeft = addPaddingsTo(binaryLeft, binaryRight.length());
+    }
+
     String result = "";
     for (int i = 0; i < binaryLeft.length(); i++) {
       result += (binaryLeft.charAt(i) == '1' && binaryRight.charAt(i) == '1') ? '1' : '0';
     }
     return result;
+  }
+
+  private static String addPaddingsTo(String input, int expectedLength) {
+    return String.format("%" + expectedLength + "s", input);
   }
 
   public static String or(String binaryLeft, String binaryRight) {
