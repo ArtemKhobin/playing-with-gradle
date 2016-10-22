@@ -5,17 +5,17 @@ class BitwiseCalc {
 
   public static void main(String[] args) {
     BitwiseCalc calc = new BitwiseCalc();
-    System.out.println(calc.and("11101111", "10111110"));
-    System.out.println(calc.and("11", "101"));
-
-    System.out.println(calc.or("011101110", "10111110"));
-    System.out.println(calc.or("11001101110", "10111110"));
+    // System.out.println(calc.and("11101111", "10111110"));
+    // System.out.println(calc.and("11", "101"));
+    //
+    // System.out.println(calc.or("011101110", "10111110"));
+    // System.out.println(calc.or("11001101110", "10111110"));
 
     System.out.println(calc.xor("11101110", "10111110"));
     System.out.println(calc.xor("1011011", "1100110"));
 
-    System.out.println(calc.not("11101110"));
-    System.out.println(calc.not("10111110"));
+    // System.out.println(calc.not("11101110"));
+    // System.out.println(calc.not("10111110"));
   }
 
   public static String and(String binaryLeft, String binaryRight) {
@@ -51,7 +51,7 @@ class BitwiseCalc {
     processBinaries(binaryLeft, binaryRight);
 
     for (int i = length - 1; i >= 0; i--) {
-      if ((left.charAt(i) == '1' || right.charAt(i) == '1') && (left.charAt(i) != right.charAt(i))) {
+      if ((left.charAt(i) == '1' || right.charAt(i) == '1') && left.charAt(i) != right.charAt(i)) {
         result = "1" + result;
       } else {
         result = "0" + result;
