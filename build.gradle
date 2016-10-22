@@ -14,7 +14,7 @@ subprojects {
   sourceSets {
     acceptanceTest {
       java {
-        srcDir file('../../acceptanceTests/src')
+        srcDir file('../acceptanceTests/src')
         compileClasspath += main.output
         runtimeClasspath += main.output
       }
