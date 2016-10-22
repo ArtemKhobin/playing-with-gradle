@@ -3,6 +3,8 @@ sudo: false
 jdk:
   - oraclejdk8
 
+script: ./gradlew check acceptanceTest
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
