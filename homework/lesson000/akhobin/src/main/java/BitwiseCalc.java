@@ -1,6 +1,7 @@
 class BitwiseCalc {
   static int length;
-  static String left, right;
+  static String left;
+  static String right;
 
   public static void main(String[] args) {
     BitwiseCalc calc = new BitwiseCalc();
@@ -50,8 +51,7 @@ class BitwiseCalc {
     processBinaries(binaryLeft, binaryRight);
 
     for (int i = length - 1; i >= 0; i--) {
-      if ((left.charAt(i) == '1' || right.charAt(i) == '1') &&
-       (left.charAt(i) != right.charAt(i))) {
+      if ((left.charAt(i) == '1' || right.charAt(i) == '1') && (left.charAt(i) != right.charAt(i))) {
         result = "1" + result;
       } else {
         result = "0" + result;
