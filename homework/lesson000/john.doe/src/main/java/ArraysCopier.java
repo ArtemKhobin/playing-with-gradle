@@ -6,8 +6,12 @@ public class ArraysCopier {
   }
 
   public int[] copyOf(int newLength) {
-    if (newLength == 0) return new int[0];
-    if (newLength == array.length) return array;
+    if (newLength == 0) {
+      return new int[0];
+    }
+    if (newLength == array.length) {
+      return array;
+    }
 
     int[] newArray = new int[newLength];
     for (int i = 0; i < newLength; i++) {
@@ -19,7 +23,9 @@ public class ArraysCopier {
   public int[] copyOfRange(int from, int to) {
     int newLength = to - from + 1;
 
-    if (newLength < 1) return null;
+    if (newLength < 1) {
+      return null;
+    }
 
     int[] newArray = new int[newLength];
     for (int i = from, newIndex = 0; i <= to; i++, newIndex++) {
