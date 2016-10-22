@@ -16,3 +16,7 @@ gradle-app.setting
 
 .idea
 *.iml
+
+# John Doe's and Jane Roe's solutions
+homework/lesson*/john.doe
+homework/lesson*/jane.roe
